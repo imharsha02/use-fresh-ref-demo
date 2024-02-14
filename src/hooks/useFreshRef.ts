@@ -1,9 +1,8 @@
-//hooks/useFreshRef.ts
 import type { MutableRefObject } from "react";
 import { useEffect, useRef } from "react";
 
 function useFreshRef<T>(
-  value: T // Value that needs to be upto date
+  value: T // Value that needs to have a upto date ref
 ): MutableRefObject<T> {
   const ref = useRef(value);
   useEffect(() => {
